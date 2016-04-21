@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
-  <body data-js-view-path="<%= js_view_path(@conn) %>">
+  <body data-js-view-name="<%= js_view_name(@conn) %>">
     <div class="container">
       <header class="header">
         <nav role="navigation">
