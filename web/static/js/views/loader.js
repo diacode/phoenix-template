@@ -1,8 +1,8 @@
 import MainView      from './main_view';
-import PageViewIndex from './page_view/index';
+import PageIndexView from './page/index';
 
 const views = {
-  PageViewIndex,
+  PageIndexView,
 };
 
 export default function loadView(viewName) {
