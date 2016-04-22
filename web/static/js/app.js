@@ -19,6 +19,7 @@ import 'phoenix_html';
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
+
 import loadView from './views/loader';
 
 function handleDocumentLoad() {
@@ -32,7 +33,7 @@ function handleDocumentLoad() {
 }
 
 function handleDocumentUnload() {
-  window.currentView.unMount();
+  window.currentView.unmount();
 }
 
 window.addEventListener('load', handleDocumentLoad, false);
