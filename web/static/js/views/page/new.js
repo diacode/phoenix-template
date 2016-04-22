@@ -1,4 +1,4 @@
-import MainView from '../main_view';
+import MainView from '../main';
 
 export default class View extends MainView {
   mount() {

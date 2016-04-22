@@ -1,7 +1,6 @@
 <div class="jumbotron">
-  <h2>New template</h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
-  <%= link("Back", to: "/") %>
+  <h2><%= @view_module  %></h2>
+  <p class="lead"><%= @view_template %></p></p>
 </div>
 
 <div class="row marketing">
