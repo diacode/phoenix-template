@@ -1,6 +1,7 @@
-import MainView      from './main';
+import MainView    from './main';
 import PageNewView from './page/new';
 
+// Collection of specific view modules
 const views = {
   PageNewView,
 };
