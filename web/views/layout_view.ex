@@ -2,16 +2,12 @@ defmodule PhoenixTemplate.LayoutView do
   use PhoenixTemplate.Web, :view
 
   @doc """
-  Generates name for the JavaScript view we want to use
+  Generates path for the JavaScript view we want to use
   in this combination of view/template.
   """
-  def js_view_name(conn, view_template) do
+  def js_view_path(conn, view_template) do
     [view_name(conn), template_name(view_template)]
-    |> Enum.reverse
-    |> List.insert_at(0, "view")
-    |> Enum.map(&String.capitalize/1)
-    |> Enum.reverse
-    |> Enum.join("")
+    |> Enum.join("/")
   end
 
   # Takes the resource name of the view module and removes the
