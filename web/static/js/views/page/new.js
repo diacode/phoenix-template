@@ -1,6 +1,6 @@
 import MainView from '../main';
 
-export default class View extends MainView {
+module.exports = class View extends MainView {
   mount() {
     super.mount();
     console.log('PageNewView mounted');
@@ -10,4 +10,4 @@ export default class View extends MainView {
     super.unmount();
     console.log('PageNewView unmounted');
   }
-}
+};

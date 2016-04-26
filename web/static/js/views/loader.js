@@ -1,11 +1,15 @@
-import MainView    from './main';
-import PageNewView from './page/new';
+const viewsContext = require.context('./', true);
+import MainView from './main';
 
-// Collection of specific view modules
-const views = {
-  PageNewView,
-};
+export default function loadView(viewPath) {
+  let view;
 
-export default function loadView(viewName) {
-  return views[viewName] || MainView;
+  try {
+    const ViewClass = viewsContext('./' + viewPath);
+    view = new ViewClass();
+  } catch (e) {
+    view = new MainView();
+  }
+
+  return view;
 }

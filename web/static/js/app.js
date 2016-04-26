@@ -23,10 +23,9 @@ import 'phoenix_html';
 import loadView from './views/loader';
 
 function handleDOMContentLoaded() {
-  const viewName = document.getElementsByTagName('body')[0].dataset.jsViewName;
+  const viewName = document.getElementsByTagName('body')[0].dataset.jsViewPath;
 
-  const ViewClass = loadView(viewName);
-  const view = new ViewClass();
+  const view = loadView(viewName);
   view.mount();
 
   window.currentView = view;
